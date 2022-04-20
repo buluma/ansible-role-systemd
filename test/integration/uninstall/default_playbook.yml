@@ -2,7 +2,7 @@
 - name: Systemd unit uninstall integration test playbook
   hosts: test-kitchen
   roles:
-    - role: ansible-role-systemd
+    - role: buluma.systemd
       vars:
         perform_uninstall: false
         unit_config:
