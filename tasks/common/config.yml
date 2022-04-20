@@ -2,22 +2,22 @@
 - name: create unit configuration path
   become: true
   when: unit_item.path is defined
-  file:
+  ansible.builtin.file:
     path: "{{ unit_item.path }}"
     state: directory
     mode: 0755
   loop: "{{ unit_config }}"
   loop_control:
     loop_var: unit_item
-    label: "{{ unit_item.name }}.{{ unit_item.type|default(_default_unit_type) }}"
+    label: "{{ unit_item.name }}.{{ unit_item.type | default(_default_unit_type) }}"
   tags:
     - config
 
 - name: render unit configuration
   become: true
-  when: unit_config is defined and unit_config|length > 0 and
+  when: unit_config is defined and unit_config | length > 0 and
     unit_item.type|default(_default_unit_type) != "conf"
-  template:
+  ansible.builtin.template:
     src: "systemd.unit.j2"
     dest: "{{ unit_item.path|default(_default_unit_path) }}/{{ unit_item.name }}.{{ unit_item.type|default(_default_unit_type) }}"
     owner: "root"
@@ -30,16 +30,16 @@
   loop: "{{ unit_config }}"
   loop_control:
     loop_var: unit_item
-    label: "{{ unit_item.name }}.{{ unit_item.type|default(_default_unit_type) }}"
+    label: "{{ unit_item.name }}.{{ unit_item.type | default(_default_unit_type) }}"
   notify: reload systemd units
   tags:
     - config
 
 - name: render override unit configuration
   become: true
-  when: unit_config is defined and unit_config|length > 0 and
+  when: unit_config is defined and unit_config | length > 0 and
     unit_item.type|default(_default_unit_type) == "conf"
-  template:
+  ansible.builtin.template:
     src: "override.conf.j2"
     dest: "{{ unit_item.path|default(_default_unit_path) }}/{{ unit_item.name }}.{{ unit_item.type|default(_default_unit_type) }}"
     owner: "root"

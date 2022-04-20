@@ -1,7 +1,7 @@
 ---
 - name: reload systemd units
   become: true
-  systemd:
+  ansible.builtin.systemd:
     name: "{{ restart_item.dest | basename }}"
     state: "{{ 'restarted' if unit_requested_state == 'started' else unit_requested_state }}"
     daemon_reload: true
@@ -18,7 +18,7 @@
 
 - name: reload systemd daemon
   become: true
-  systemd:
+  ansible.builtin.systemd:
     daemon_reload: true
   when: restart_item.changed
   loop: "{{ restart_override_units.results }}"
@@ -30,7 +30,7 @@
 
 - name: uninstall systemd units
   become: true
-  systemd:
+  ansible.builtin.systemd:
     name: "{{ unit_item.name }}.{{ unit_item.type | default(_default_unit_type) }}"
     state: "stopped"
     enabled: "no"
@@ -43,7 +43,7 @@
 
 - name: remove managed systemd unit files
   become: true
-  file:
+  ansible.builtin.file:
     path: "{{ unit_item.path | default(_default_unit_path) }}/{{ unit_item.name }}.{{ unit_item.type | default(_default_unit_type) }}"
     state: absent
   listen: Uninstall units
