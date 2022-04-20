@@ -32,6 +32,12 @@ molecule:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "amazonlinux"
+        tag: "1"
+      - image: "amazonlinux"
+        tag: "latest"
+      - image: "archlinux"
+        tag: "latest"
 
 testing:
   script:
@@ -59,6 +65,12 @@ testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "amazonlinux"
+        tag: "1"
+      - image: "amazonlinux"
+        tag: "latest"
+      - image: "archlinux"
+        tag: "latest"
 
 galaxy:
   script:
@@ -88,3 +100,9 @@ role_testing:
         tag: "bionic"
       - image: "docker-ubuntu-systemd"
         tag: "focal"
+      - image: "amazonlinux"
+        tag: "1"
+      - image: "amazonlinux"
+        tag: "latest"
+      - image: "archlinux"
+        tag: "latest"

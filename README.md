@@ -80,6 +80,8 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |debian|all|
 |fedora|all|
 |ubuntu|all|
+|amazon|all|
+|archlinux|all|
 
 The minimum version of Ansible required is 2.1, tests have been done to:
 

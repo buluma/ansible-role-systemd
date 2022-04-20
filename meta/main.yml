@@ -20,6 +20,12 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Amazon
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
   galaxy_tags:
     - systemd
     - system
