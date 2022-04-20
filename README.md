@@ -30,7 +30,7 @@ The machine needs to be prepared. In CI this is done using `molecule/default/pre
 
   roles:
     - role: buluma.bootstrap
-    - role: buluma.core_dependencies
+    - role: buluma.systemd
 ```
 
 
