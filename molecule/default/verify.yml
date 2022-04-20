@@ -5,5 +5,5 @@
   gather_facts: no
 
   tasks:
-    - name: test connection
+    - name: test connection still exists
       ansible.builtin.ping:

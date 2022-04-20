@@ -4,7 +4,7 @@ Systemd, a system and service manager for Linux operating systems
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/systemd)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/systemd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/58859)](https://galaxy.ansible.com/buluma/systemd)|[![downloads](https://img.shields.io/ansible/role/d/58859)](https://galaxy.ansible.com/buluma/systemd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -54,6 +54,13 @@ perform_uninstall: false
 
 - pip packages listed in [requirements.txt](https://github.com/buluma/ansible-role-systemd/blob/main/requirements.txt).
 
+## [Status of used roles](#status-of-requirements)
+
+The following roles are used to prepare a system. You can prepare your system in another way.
+
+| Requirement | GitHub | GitLab |
+|-------------|--------|--------|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-bootstrap/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-bootstrap)|
 
 ## [Context](#context)
 
