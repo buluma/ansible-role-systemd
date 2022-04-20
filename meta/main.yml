@@ -23,9 +23,6 @@ galaxy_info:
     - name: Amazon
       versions:
         - all
-    - name: Archlinux
-      versions:
-        - all
   galaxy_tags:
     - systemd
     - system

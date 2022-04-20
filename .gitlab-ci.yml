@@ -36,8 +36,6 @@ molecule:
         tag: "1"
       - image: "amazonlinux"
         tag: "latest"
-      - image: "archlinux"
-        tag: "latest"
 
 testing:
   script:
@@ -68,8 +66,6 @@ testing:
       - image: "amazonlinux"
         tag: "1"
       - image: "amazonlinux"
-        tag: "latest"
-      - image: "archlinux"
         tag: "latest"
 
 galaxy:
@@ -103,6 +99,4 @@ role_testing:
       - image: "amazonlinux"
         tag: "1"
       - image: "amazonlinux"
-        tag: "latest"
-      - image: "archlinux"
         tag: "latest"

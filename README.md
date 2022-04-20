@@ -4,7 +4,7 @@ Systemd, a system and service manager for Linux operating systems
 
 |GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/58859)](https://galaxy.ansible.com/buluma/systemd)|[![downloads](https://img.shields.io/ansible/role/d/58859)](https://galaxy.ansible.com/buluma/systemd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/pulls/)|
+|[![github](https://github.com/buluma/ansible-role-systemd/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-systemd/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-systemd/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-systemd)|[![quality](https://img.shields.io/ansible/quality/)](https://galaxy.ansible.com/buluma/systemd)|[![downloads](https://img.shields.io/ansible/role/d/)](https://galaxy.ansible.com/buluma/systemd)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-systemd.svg)](https://github.com/buluma/ansible-role-systemd/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -81,7 +81,6 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |fedora|all|
 |ubuntu|all|
 |amazon|all|
-|archlinux|all|
 
 The minimum version of Ansible required is 2.1, tests have been done to:
 
@@ -89,6 +88,13 @@ The minimum version of Ansible required is 2.1, tests have been done to:
 - The current version.
 - The development version.
 
+## [Exceptions](#exceptions)
+
+Some roles can't run on a specific distribution or version. Here are some exceptions.
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| Archlinux | GLIBC_2.34 not found |
 
 
 If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-systemd/issues)
