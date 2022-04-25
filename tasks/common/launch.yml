@@ -1,7 +1,7 @@
 ---
 
 - name: force the reload of the modified systemd units
-  meta: flush_handlers
+  ansible.builtin.meta: flush_handlers
 
 - name: activate configured Systemd units
   become: true

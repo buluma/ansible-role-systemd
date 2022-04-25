@@ -3,10 +3,10 @@
   when: perform_uninstall | bool
   block:
     - name: broadcast uninstall signal
-      command: /bin/true
+      ansible.builtin.command: /bin/true
       notify: Uninstall units
   always:
     - name: Flush handlers
-      meta: flush_handlers
+      ansible.builtin.meta: flush_handlers
   tags:
     - preflight
