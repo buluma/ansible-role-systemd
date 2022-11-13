@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-systemd/tree/HEAD)
+## [0.1.2](https://github.com/buluma/ansible-role-systemd/tree/0.1.2) (2022-08-16)
 
-[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.1.1...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.1.1...0.1.2)
 
 **Closed issues:**
 
