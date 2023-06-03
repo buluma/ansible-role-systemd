@@ -5,7 +5,7 @@ galaxy_info:
   description: Systemd, a system and service manager for Linux operating systems
   company: ShadowNet
   license: Apache-2.0
-  min_ansible_version: "2.10"
+  min_ansible_version: "2.12"
   platforms:
     - name: EL
       versions:
@@ -17,6 +17,9 @@ galaxy_info:
       versions:
         - all
     - name: Ubuntu
+      versions:
+        - all
+    - name: Kali
       versions:
         - all
     - name: Amazon

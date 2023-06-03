@@ -5,4 +5,4 @@
 repository:
   description: Systemd, a system and service manager for Linux operating systems
   homepage: https://buluma.github.io/
-  topics: systemd, system, manager, ansible, molecule, tox, playbook, hacktoberfest
+  topics: systemd, system, manager, ansible, molecule, tox, playbook

@@ -1,5 +1,5 @@
 ---
-- name: Check for uninstall signal
+- name: preflight | Check for uninstall signal
   when: perform_uninstall | bool
   block:
     - name: broadcast uninstall signal

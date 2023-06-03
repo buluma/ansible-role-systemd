@@ -3,7 +3,6 @@
 # Ansible managed
 #
 exclude_paths:
-  - ./meta/exception.yml
   - ./meta/preferences.yml
   - ./molecule/default/prepare.yml
   - ./molecule/default/converge.yml
@@ -11,9 +10,11 @@ exclude_paths:
   - ./molecule/default/collections.yml
   - ./.tox
   - ./.cache
+  - ./.github
+  - ./requirements.yml
 
 skip_list:
-  - experimental  # all rules tagged as experimental
-  - fqcn-builtins  # Use FQCN for builtin actions.
-  - no-changed-when  # Commands should not change things if nothing needs doing.
-  - var-spacing
+  - yaml[truthy]
+
+enable_list:
+  - name[prefix]
