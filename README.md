@@ -12,13 +12,32 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
+- name: converge
   hosts: all
   become: yes
   gather_facts: yes
 
   roles:
     - role: buluma.systemd
+      systemd_default_target: multi-user.target
+      systemd_coredump:
+        - option: Compress
+          value: "yes"
+      systemd_journald:
+        - option: LineMax
+          value: 48k
+      systemd_logind:
+        - option: HandleLidSwitch
+          value: ignore
+      systemd_resolved:
+        - option: DNSOverTLS
+          value: "no"
+      systemd_system:
+        - option: LogLevel
+          value: info
+      systemd_user:
+        - option: DefaultStartLimitBurst
+          value: 5
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-systemd/blob/master/molecule/default/prepare.yml):
@@ -42,15 +61,42 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 
 ```yaml
 ---
-_default_unit_path: "/etc/systemd/system"
-_default_unit_type: "service"
-_default_unit_enabled: "no"
-_default_systemd_backup_files: true
-_default_unit_state: "stopped"
+# defaults file for systemd
 
-unit_config: []
+# Select the target to boot into. Either "multiuser.target",
+# "graphical.target" or "rescue.target".
+# systemd_default_target: multi-user.target
+systemd_default_target: ""
 
-perform_uninstall: false
+# Set options in coredump.conf. For example:
+# systemd_coredump:
+#   - option: Compress
+#     value: "yes"
+systemd_coredump: []
+
+# Set options in journald.conf. For example:
+# systemd_journald:
+#   - option: LineMax
+#     value: 48k
+systemd_journald: []
+
+# Set options in logind.conf. For example:
+# systemd_logind:
+#   - option: HandleLidSwitch
+#     value: ignore
+systemd_logind: []
+
+# Set options in resolved.conf. For example:
+# systemd_resolved:
+#   - option: DNSOverTLS
+#     value: "no"
+systemd_resolved: []
+
+# Set options in system.conf. For example:
+# systemd_system:
+#   - option: LogLevel
+#     value: info
+systemd_system: []
 ```
 
 ## [Requirements](#requirements)
@@ -79,12 +125,12 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
+|[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
 |[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
-|[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 

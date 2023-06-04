@@ -3,17 +3,21 @@ galaxy_info:
   author: buluma
   role_name: systemd
   description: Systemd, a system and service manager for Linux operating systems
-  company: ShadowNet
   license: Apache-2.0
+  company: ShadowNet
   min_ansible_version: "2.12"
+
   platforms:
-    - name: EL
-      versions:
-        - all
     - name: Debian
       versions:
         - all
+    - name: EL
+      versions:
+        - "8"
     - name: Fedora
+      versions:
+        - all
+    - name: opensuse
       versions:
         - all
     - name: Ubuntu
@@ -22,12 +26,7 @@ galaxy_info:
     - name: Kali
       versions:
         - all
-    - name: Amazon
-      versions:
-        - all
   galaxy_tags:
     - systemd
-    - system
-    - manager
 
 dependencies: []
