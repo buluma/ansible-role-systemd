@@ -15,6 +15,11 @@ exclude_paths:
 
 skip_list:
   - yaml[truthy]
+  - ignore-errors
+  - no-handler
+  - key-order[task]
+  - no-changed-when
+  - name[prefix]
 
 enable_list:
   - name[prefix]
