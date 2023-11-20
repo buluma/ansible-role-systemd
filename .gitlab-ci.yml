@@ -18,6 +18,8 @@ molecule:
         tag: "bullseye"
       - image: "enterpriselinux"
         tag: "8"
+      - image: "enterpriselinux"
+        tag: "latest"
       - image: "fedora-systemd"
         tag: "37"
       - image: "fedora-systemd"
@@ -30,10 +32,6 @@ molecule:
         tag: "focal"
       - image: "docker-ubuntu-systemd"
         tag: "bionic"
-      - image: "docker-ubuntu-systemd"
-        tag: "lunar"
-      - image: "kali"
-        tag: "latest"
 
 galaxy:
   script:

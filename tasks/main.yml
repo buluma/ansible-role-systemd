@@ -2,7 +2,8 @@
 # tasks file for systemd
 
 - name: Import assert.yml
-  ansible.builtin.import_tasks: assert.yml
+  ansible.builtin.import_tasks:
+    file: assert.yml
   run_once: yes
   delegate_to: localhost
 
@@ -61,6 +62,7 @@
   when:
     - systemd_logind is defined
   notify:
+    - Unmask systemd-logind
     - Restart systemd-logind
 
 - name: Configure resolved.conf

@@ -1,6 +1,6 @@
 # [Ansible role systemd](#systemd)
 
-Systemd, a system and service manager for Linux operating systems
+Set default target and configure systemd.
 
 |GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
 |------|------|-------|-------|------|-------------|
@@ -12,7 +12,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: converge
+- name: Converge
   hosts: all
   become: yes
   gather_facts: yes
@@ -126,11 +126,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8, 9|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
-|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 

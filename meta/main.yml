@@ -2,7 +2,7 @@
 galaxy_info:
   author: buluma
   role_name: systemd
-  description: Systemd, a system and service manager for Linux operating systems
+  description: Set default target and configure systemd.
   license: Apache-2.0
   company: ShadowNet
   min_ansible_version: "2.12"
@@ -14,6 +14,7 @@ galaxy_info:
     - name: EL
       versions:
         - "8"
+        - "9"
     - name: Fedora
       versions:
         - all
@@ -23,10 +24,9 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-    - name: Kali
-      versions:
-        - all
+
   galaxy_tags:
     - systemd
+    - system
 
 dependencies: []

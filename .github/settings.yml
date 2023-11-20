@@ -3,6 +3,6 @@
 # Ansible managed
 #
 repository:
-  description: Systemd, a system and service manager for Linux operating systems
+  description: Set default target and configure systemd.
   homepage: https://buluma.github.io/
-  topics: systemd, ansible, molecule, tox, playbook
+  topics: systemd, system, ansible, molecule, tox, playbook
