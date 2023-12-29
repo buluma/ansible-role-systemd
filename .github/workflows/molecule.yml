@@ -18,7 +18,7 @@ on:
       - '*'
   pull_request:
   schedule:
-    - cron: '37 19 19 * *'
+    - cron: '37 17 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
