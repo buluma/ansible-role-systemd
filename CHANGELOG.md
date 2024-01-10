@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-systemd/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.2.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#16](https://github.com/buluma/ansible-role-systemd/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 3 to 4 [\#15](https://github.com/buluma/ansible-role-systemd/pull/15) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [0.2.0](https://github.com/buluma/ansible-role-systemd/tree/0.2.0) (2024-01-02)
 
 [Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.1.3...0.2.0)
