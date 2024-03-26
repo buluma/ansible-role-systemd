@@ -14,15 +14,15 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: buluma.systemd
       systemd_default_target: multi-user.target
       systemd_coredump:
         - option: Compress
-          value: "yes"
+          value: "true"
       systemd_journald:
         - option: LineMax
           value: 48k
@@ -31,7 +31,7 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
           value: ignore
       systemd_resolved:
         - option: DNSOverTLS
-          value: "no"
+          value: "false"
       systemd_system:
         - option: LogLevel
           value: info
@@ -46,8 +46,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: buluma.bootstrap
@@ -71,7 +71,7 @@ systemd_default_target: ""
 # Set options in coredump.conf. For example:
 # systemd_coredump:
 #   - option: Compress
-#     value: "yes"
+#     value: "true"
 systemd_coredump: []
 
 # Set options in journald.conf. For example:
@@ -89,7 +89,7 @@ systemd_logind: []
 # Set options in resolved.conf. For example:
 # systemd_resolved:
 #   - option: DNSOverTLS
-#     value: "no"
+#     value: "false"
 systemd_resolved: []
 
 # Set options in system.conf. For example:
