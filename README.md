@@ -73,25 +73,21 @@ systemd_default_target: ""
 #   - option: Compress
 #     value: "true"
 systemd_coredump: []
-
 # Set options in journald.conf. For example:
 # systemd_journald:
 #   - option: LineMax
 #     value: 48k
 systemd_journald: []
-
 # Set options in logind.conf. For example:
 # systemd_logind:
 #   - option: HandleLidSwitch
 #     value: ignore
 systemd_logind: []
-
 # Set options in resolved.conf. For example:
 # systemd_resolved:
 #   - option: DNSOverTLS
 #     value: "false"
 systemd_resolved: []
-
 # Set options in system.conf. For example:
 # systemd_system:
 #   - option: LogLevel
