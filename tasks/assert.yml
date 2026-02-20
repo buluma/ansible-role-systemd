@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test systemd_default_target
   ansible.builtin.assert:
     that:
