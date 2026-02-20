@@ -2,10 +2,20 @@
 
 ## [Unreleased](https://github.com/buluma/ansible-role-systemd/tree/HEAD)
 
-[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.3.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#13](https://github.com/buluma/ansible-role-systemd/issues/13)
+- rebuild action [\#12](https://github.com/buluma/ansible-role-systemd/issues/12)
+
+## [24.3.31](https://github.com/buluma/ansible-role-systemd/tree/24.3.31) (2024-03-29)
+
+[Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.3.0...24.3.31)
 
 **Merged pull requests:**
 
+- Bump dependabot/fetch-metadata from 1 to 2 [\#23](https://github.com/buluma/ansible-role-systemd/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/dependabot-auto-merge-action from 2.1.1 to 2.1.2 [\#20](https://github.com/buluma/ansible-role-systemd/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#19](https://github.com/buluma/ansible-role-systemd/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 

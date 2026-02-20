@@ -1,15 +1,15 @@
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
-    - role: ansible-role-systemd
+    - role: buluma.systemd
       systemd_default_target: multi-user.target
       systemd_coredump:
         - option: Compress
-          value: "yes"
+          value: "true"
       systemd_journald:
         - option: LineMax
           value: 48k
@@ -18,7 +18,7 @@
           value: ignore
       systemd_resolved:
         - option: DNSOverTLS
-          value: "no"
+          value: "false"
       systemd_system:
         - option: LogLevel
           value: info

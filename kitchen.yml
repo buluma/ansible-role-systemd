@@ -12,7 +12,7 @@ default_driver_config: &default_driver_config
   volume:
     - /sys/fs/cgroup:/sys/fs/cgroup
   provision_command:
-    - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+    - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
     - systemctl enable sshd.service
 
 transport:
@@ -47,40 +47,40 @@ platforms:
     driver_config:
       <<: *default_driver_config
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable sshd.service
         - yum -y install python-pip
   - name: fedora-33
     driver_config:
       <<: *default_driver_config
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable sshd.service
         - yum -y install python-pip
   - name: ubuntu-16.04
     driver_config:
       <<: *default_driver_config
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable ssh.service
   - name: ubuntu-18.04
     driver_config:
       <<: *default_driver_config
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable ssh.service
   - name: ubuntu-20.04
     driver_config:
       <<: *default_driver_config
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable ssh.service
   - name: debian-8
     driver_config:
       <<: *default_driver_config
       run_command: /lib/systemd/systemd
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable ssh.service
     provisioner:
       ansible_cfg_path: test/ansible-legacy.cfg
@@ -89,7 +89,7 @@ platforms:
       <<: *default_driver_config
       run_command: /lib/systemd/systemd
       provision_command:
-        - sed -i 's/UsePAM yes/UsePAM no/g' /etc/ssh/sshd_config
+        - sed -i 's/UsePAM true/UsePAM false/g' /etc/ssh/sshd_config
         - systemctl enable ssh.service
 
 suites:
