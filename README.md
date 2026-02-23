@@ -12,45 +12,45 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
 ```yaml
 ---
-- name: Converge
-  hosts: all
-  become: true
-  gather_facts: true
+  - name: Converge
+    hosts: all
+    become: true
+    gather_facts: true
 
-  roles:
-    - role: buluma.systemd
-      systemd_default_target: multi-user.target
-      systemd_coredump:
-        - option: Compress
-          value: "true"
-      systemd_journald:
-        - option: LineMax
-          value: 48k
-      systemd_logind:
-        - option: HandleLidSwitch
-          value: ignore
-      systemd_resolved:
-        - option: DNSOverTLS
-          value: "false"
-      systemd_system:
-        - option: LogLevel
-          value: info
-      systemd_user:
-        - option: DefaultStartLimitBurst
-          value: 5
+    roles:
+      - role: buluma.systemd
+        systemd_default_target: multi-user.target
+        systemd_coredump:
+          - option: Compress
+            value: "true"
+        systemd_journald:
+          - option: LineMax
+            value: 48k
+        systemd_logind:
+          - option: HandleLidSwitch
+            value: ignore
+        systemd_resolved:
+          - option: DNSOverTLS
+            value: "false"
+        systemd_system:
+          - option: LogLevel
+            value: info
+        systemd_user:
+          - option: DefaultStartLimitBurst
+            value: 5
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-systemd/blob/master/molecule/default/prepare.yml):
 
 ```yaml
 ---
-- name: Prepare
-  hosts: all
-  become: true
-  gather_facts: false
+  - name: Prepare
+    hosts: all
+    become: true
+    gather_facts: false
 
-  roles:
-    - role: buluma.bootstrap
+    roles:
+      - role: buluma.bootstrap
 ```
 
 Also see a [full explanation and example](https://buluma.github.io/how-to-use-these-roles.html) on how to use these roles.
