@@ -9,6 +9,10 @@
 - Update action [\#13](https://github.com/buluma/ansible-role-systemd/issues/13)
 - rebuild action [\#12](https://github.com/buluma/ansible-role-systemd/issues/12)
 
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#21](https://github.com/buluma/ansible-role-systemd/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.3.31](https://github.com/buluma/ansible-role-systemd/tree/24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-systemd/compare/0.3.0...24.3.31)
